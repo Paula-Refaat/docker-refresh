@@ -242,7 +242,7 @@ docker run --rm \
   -v postgres-data:/data \
   -v $(pwd):/backup \
   alpine \
-  tar czf /backup/backup_$(date +%Y%m%d_%H%M%S).tar.gz -C /data .
+  sh -c 'tar czf /backup/backup_$(date +%Y%m%d_%H%M%S).tar.gz -C /data .'
 ```
 
 ### Restore Volume
@@ -298,8 +298,8 @@ docker volume create \
 # Find volume on host
 docker volume inspect my-volume --format '{{.Mountpoint}}'
 
-# List files in volume (Linux)
-sudo ls -la $(docker volume inspect my-volume --format '{{.Mountpoint}}')
+# List files in volume (cross-platform)
+docker run --rm -v my-volume:/data alpine ls -la /data
 ```
 
 ## Common Patterns

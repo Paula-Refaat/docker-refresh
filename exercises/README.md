@@ -307,8 +307,8 @@ docker network create backend
 # Run database (backend only)
 docker run -d --name db --network backend postgres:15-alpine -e POSTGRES_PASSWORD=secret
 
-# Run API (both networks)
-docker run -d --name api --network backend node:18-alpine sleep 3600
+# Run API (both networks) - using a long-running process for testing
+docker run -d --name api --network backend node:18-alpine sh -c "while true; do sleep 30; done"
 docker network connect frontend api
 
 # Run web (frontend only)
