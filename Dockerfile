@@ -8,8 +8,8 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install --production
+# Install all dependencies (including devDependencies for build)
+RUN npm ci
 
 # Stage 2: Production stage
 FROM node:18-alpine
@@ -21,12 +21,14 @@ WORKDIR /app
 RUN addgroup -g 1001 -S nodejs && \
     adduser -S nodejs -u 1001
 
-# Copy dependencies from builder stage
-COPY --from=builder /app/node_modules ./node_modules
+# Copy package files
+COPY package*.json ./
+
+# Install only production dependencies
+RUN npm ci --omit=dev
 
 # Copy application code
 COPY app.js .
-COPY package.json .
 
 # Change ownership to non-root user
 RUN chown -R nodejs:nodejs /app
