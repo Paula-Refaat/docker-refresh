@@ -1,0 +1,25 @@
+# Node modules
+node_modules
+npm-debug.log
+
+# Git files
+.git
+.gitignore
+
+# Documentation
+README.md
+LICENSE
+*.md
+
+# Development files
+.vscode
+.idea
+*.log
+
+# Testing
+coverage
+.nyc_output
+
+# Environment files
+.env.local
+.env.*.local
