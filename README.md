@@ -42,6 +42,12 @@ Quick reference for commonly used Docker commands
 - Performance optimization
 - Production readiness
 
+### 9. [Hands-on Exercises](exercises/)
+- Beginner exercises
+- Intermediate challenges
+- Advanced projects
+- Real-world scenarios
+
 ## 🚀 Quick Start
 
 ```bash
@@ -59,7 +65,8 @@ docker run -p 3000:3000 my-node-app
 
 1. **Beginners**: Start with [Docker Basics](docs/docker-basics.md) and simple [Dockerfile examples](examples/dockerfiles/)
 2. **Intermediate**: Explore [Docker Compose](examples/docker-compose/) and [networking examples](examples/networking/)
-3. **Advanced**: Study [multi-stage builds](examples/dockerfiles/multi-stage/), [best practices](docs/best-practices.md), and security
+3. **Advanced**: Study [multi-stage builds](examples/dockerfiles/multi-stage-build.md), [best practices](docs/best-practices.md), and security
+4. **Practice**: Work through [hands-on exercises](exercises/) to reinforce your learning
 
 ## 🛠️ Prerequisites
 
@@ -69,7 +76,7 @@ docker run -p 3000:3000 my-node-app
 
 ## 📝 Contributing
 
-Feel free to add more examples or improve existing documentation!
+Feel free to add more examples or improve existing documentation! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 📄 License
 
