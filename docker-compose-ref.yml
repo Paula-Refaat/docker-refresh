@@ -3,6 +3,8 @@ services:
   node-app:
     container_name: express-node-app-container
     build: .
+    volumes:
+      - ./src:/app/src:ro
     ports:
       - "8000:4000"
     env_file:
