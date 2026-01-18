@@ -1,0 +1,19 @@
+{
+  "name": "docker-refresh-app",
+  "version": "1.0.0",
+  "description": "Sample application for Docker learning",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": ["docker", "node", "express"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
