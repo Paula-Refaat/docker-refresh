@@ -1,0 +1,19 @@
+{
+  "name": "docker-refresh",
+  "version": "1.0.0",
+  "description": "A repository to refresh my Docker knowledge.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
