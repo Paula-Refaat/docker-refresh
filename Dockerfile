@@ -10,8 +10,6 @@ RUN if ["$NODE_ENV" = "production"]; \
     else npm install; \
     fi
 
-RUN npm install
-
 COPY . .
 
 EXPOSE 4000
