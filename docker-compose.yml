@@ -2,7 +2,6 @@ version: "5.0.1"
 services:
   node-app:
     container_name: express-node-app-container
-    build: .
     ports:
       - "8000:4000"
     env_file:
